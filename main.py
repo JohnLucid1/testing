@@ -15,6 +15,8 @@ class Calculator:
         return self.num1 * self.num2
 
     def divide_by_num(self):
+        if self.num2 == 0:
+            return "cant devide by 0"
         return self.num1 / self.num2
 
     def to_number_power(self):
