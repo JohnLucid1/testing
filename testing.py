@@ -2,6 +2,7 @@
 #! На моей машине чтобы запустить тест нужно написать в консоли "python -m pytest -v filename.py"
 from main import Calculator
 thing = Calculator(100, 5)
+thing1 = Calculator(100, 0)
 
 
 def test_minus_num():
@@ -18,6 +19,10 @@ def test_multiply_by_num():
 
 def test_devide_by_num():
     assert thing.divide_by_num() != 19
+
+
+def test_devide_by_zero():
+    assert thing1.divide_by_num() == "cant devide by 0"
 
 
 def test_to_number_power():
